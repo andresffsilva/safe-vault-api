@@ -1,6 +1,36 @@
-@SafeVaultApi.Api_HostAddress = http://localhost:5033
+@SafeVaultApi_HostAddress = http://localhost:5033
 
-GET {{SafeVaultApi.Api_HostAddress}}/weatherforecast/
+POST {{SafeVaultApi_HostAddress}}/api/users/authentication/
 Accept: application/json
+Content-Type: application/json
+
+{
+    "UserName" : "Admin",
+    "Passwd" : "Admin.2025"
+}
+
+###
+
+POST {{SafeVaultApi_HostAddress}}/api/users/create/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc0Nzg5MDkxMCwiaXNzIjoiU2FmZVZhdWx0QXBpIiwiYXVkIjoiU2FmZVZhdWx0QXBpVXNlcnMifQ.5KkHc5_7SUyljXKXULJG9CH6KHAR7PGbeBbXOmqAjAU
+
+{
+    "UserName" : "User",
+    "Email": "user@yopmail.com"
+}
+
+###
+
+GET {{SafeVaultApi_HostAddress}}/api/users/getone/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc0Nzg5MDkxMCwiaXNzIjoiU2FmZVZhdWx0QXBpIiwiYXVkIjoiU2FmZVZhdWx0QXBpVXNlcnMifQ.5KkHc5_7SUyljXKXULJG9CH6KHAR7PGbeBbXOmqAjAU
+
+###
+
+GET {{SafeVaultApi_HostAddress}}/api/users/getall/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc0Nzg5MDkxMCwiaXNzIjoiU2FmZVZhdWx0QXBpIiwiYXVkIjoiU2FmZVZhdWx0QXBpVXNlcnMifQ.5KkHc5_7SUyljXKXULJG9CH6KHAR7PGbeBbXOmqAjAU
 
 ###
